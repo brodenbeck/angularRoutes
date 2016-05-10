@@ -1,26 +1,34 @@
 var app = angular.module('route', ['ngRoute']);
 
 app.config(function($routeProvider){
+  $routeProvider.when('/', {
+  	templateUrl: 'html/mainView.html',
+  });
+
   $routeProvider.when('/cat', {
-    templateUrl: 'cat.html',
+    templateUrl: 'html/cat.html',
     controller: 'catController'
   });
   
   $routeProvider.when('/dog', {
-    templateUrl: 'dog.html',
+    templateUrl: 'html/dog.html',
     controller: 'dogController'
   });
 
   $routeProvider.when('/squirrel', {
-    templateUrl: 'squirrel.html',
+    templateUrl: 'html/squirrel.html',
     controller: 'squirrelController'
   });
 
   $routeProvider.when('/piggy', {
-    templateUrl: 'piggy.html',
+    templateUrl: 'html/piggy.html',
     controller: 'piggyController'
   });
 
-  $routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.otherwise({ 
+  	redirectTo: '/404',
+  	templateUrl: 'html/404.html', 
+  	controller: 'errorController'
+  });
 
 });
