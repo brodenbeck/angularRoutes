@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="route">
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<header>
+			<h1>Picture Views</h1>
+			<nav>
+				<ul>
+					<a href="#/cat"><li>Cat</li></a>
+					<a href="#/dog"><li>Dog</li></a>
+					<a href="#/squirrel"><li>Squirrel</li></a>
+					<a href="#/piggy"><li>Piggy</li></a>
+				</ul>
+			</nav>
+		</header>
+
+		<ng-view></ng-view>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script type="text/javascript" src="https://code.angularjs.org/1.3.16/angular-route.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="catController.js"></script>
+		<script type="text/javascript" src="dogController.js"></script>
+		<script type="text/javascript" src="squirrelController.js"></script>
+		<script type="text/javascript" src="piggyController.js"></script>
+	</body>
+</html>
